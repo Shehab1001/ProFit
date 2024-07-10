@@ -70,9 +70,7 @@ subscriptionSchema.pre("save", async function (next) {
       }
     }
   }
-  // if (this.endDate && this.endDate < new Date()) {
-  //   this.status = "Expired";
-  // }
+
   next();
 });
 
