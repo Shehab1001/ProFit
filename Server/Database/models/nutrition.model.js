@@ -17,11 +17,10 @@ const nutritionSchema = new Schema(
       ref: "Trainee",
       required: false,
     },
-    ///////////////////////
+   
     gender: {
       type: String,
       enum: ["Male", "Female"],
-      // default: "Male",
     },
     birthDate: {
       type: Date,
@@ -46,7 +45,7 @@ const nutritionSchema = new Schema(
         "In active",
       ],
     },
-    ////////////////////////////////
+
     daysCount: {
       type: Number,
       min: 1,
@@ -310,8 +309,3 @@ export { calculateFreePlanSubscribers };
 
 export const nutritionModel = model("nutrition", nutritionSchema);
 
-// numberofdays: {
-//   type: Number,
-//   min: 1,
-//   required: false,
-// },
