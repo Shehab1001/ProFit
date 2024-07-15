@@ -7,7 +7,7 @@ $colors: (
   "blue",
   "gray",
   "neutral"
-);
+)
 
 // Define the list of shades for each color
 $shades: (
@@ -22,7 +22,7 @@ $shades: (
   "800",
   "900",
   "950"
-);
+)
 
 // Mixin to generate styles based on color and shade
 // - $prefix: the prefix for the CSS class (e.g., "bg", "border", "text")
@@ -34,7 +34,7 @@ $shades: (
     @if ($color == "white" or $color == "black") {
       // Generate a single class for white and black without shades
       .#{$prefix}-#{$color} {
-        #{$property}: #{$color};
+        #{$property}: #{$color}
       }
     } @else {
       // Iterate over each shade for other colors
@@ -42,7 +42,7 @@ $shades: (
         // Generate a class for each combination of color and shade
         .#{$prefix}-#{$color}-#{$shade} {
           // Use a placeholder for the color and shade values
-          #{$property}: $color-#{$shade};
+          #{$property}: $color-#{$shade}
         }
       }
     }
@@ -50,10 +50,10 @@ $shades: (
 }
 
 // Include the mixin for background colors
-@include generate-styles("bg", "background-color");
+@include generate-styles("bg", "background-color")
 
 // Include the mixin for border colors
-@include generate-styles("border", "border-color");
+@include generate-styles("border", "border-color")
 
 // Include the mixin for text colors
-@include generate-styles("text", "color");
+@include generate-styles("text", "color")
