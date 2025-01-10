@@ -11,7 +11,7 @@ function SocketProvider({ children }) {
 
     useEffect(() => {
         if (userToken) {
-            const socketInstance = io('https://pro-fit.onrender.com', {
+            const socketInstance = io('https://localhost:4000', {
                 auth: { token: userToken }
             });
             setSocket(socketInstance);
